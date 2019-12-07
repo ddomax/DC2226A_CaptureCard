@@ -1,0 +1,261 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Sun Feb 17 14:42:24 2019
+| Host         : zhatianyics-PC running 64-bit major release  (build 9200)
+| Command      : report_drc -file axi_spi_top_wrapper_drc_routed.rpt -pb axi_spi_top_wrapper_drc_routed.pb -rpx axi_spi_top_wrapper_drc_routed.rpx
+| Design       : axi_spi_top_wrapper
+| Device       : xc7k325tffg900-2
+| Speed File   : -2
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 42
++-----------+----------+-----------------------------------------------------+------------+
+| Rule      | Severity | Description                                         | Violations |
++-----------+----------+-----------------------------------------------------+------------+
+| BUFC-1    | Warning  | Input Buffer Connections                            | 5          |
+| CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| DPIP-1    | Warning  | Input pipelining                                    | 4          |
+| DPOP-1    | Warning  | PREG Output pipelining                              | 2          |
+| REQP-1617 | Warning  | use_IOB_register                                    | 1          |
+| RTSTAT-10 | Warning  | No routable loads                                   | 1          |
+| REQP-28   | Advisory | enum_USE_MULT_NONE_connects_CEM_GND                 | 14         |
+| REQP-30   | Advisory | enum_MREG_0_connects_CEM_GND                        | 14         |
++-----------+----------+-----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+BUFC-1#1 Warning
+Input Buffer Connections  
+Input buffer axi_spi_top_i/Tgate_width5_0/inst/genblk1[0].IOBUF_inst/IBUF (in axi_spi_top_i/Tgate_width5_0/inst/genblk1[0].IOBUF_inst macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+BUFC-1#2 Warning
+Input Buffer Connections  
+Input buffer axi_spi_top_i/Tgate_width5_0/inst/genblk1[1].IOBUF_inst/IBUF (in axi_spi_top_i/Tgate_width5_0/inst/genblk1[1].IOBUF_inst macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+BUFC-1#3 Warning
+Input Buffer Connections  
+Input buffer axi_spi_top_i/Tgate_width5_0/inst/genblk1[2].IOBUF_inst/IBUF (in axi_spi_top_i/Tgate_width5_0/inst/genblk1[2].IOBUF_inst macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+BUFC-1#4 Warning
+Input Buffer Connections  
+Input buffer axi_spi_top_i/Tgate_width5_0/inst/genblk1[3].IOBUF_inst/IBUF (in axi_spi_top_i/Tgate_width5_0/inst/genblk1[3].IOBUF_inst macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+BUFC-1#5 Warning
+Input Buffer Connections  
+Input buffer axi_spi_top_i/Tgate_width5_0/inst/genblk1[4].IOBUF_inst/IBUF (in axi_spi_top_i/Tgate_width5_0/inst/genblk1[4].IOBUF_inst macro) has no loads. It is recommended to have an input buffer drive an internal load.
+Related violations: <none>
+
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg input axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg input axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult1/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg input axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult1/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult1/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg input axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult1/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult1/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg output axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/mult1/comp0.core_instance0/U0/i_mult/gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+REQP-1617#1 Warning
+use_IOB_register  
+The FDRE cell axi_spi_top_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is property connected to an IO.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+63 net(s) have no routable loads. The problem bus(es) and/or net(s) are axi_spi_top_i/jtag_axi_0/inst/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, axi_spi_top_i/jtag_axi_0/inst/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, axi_spi_top_i/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, axi_spi_top_i/jtag_axi_0/inst/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], axi_spi_top_i/jtag_axi_0/inst/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, axi_spi_top_i/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, axi_spi_top_i/jtag_axi_0/inst/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, axi_spi_top_i/jtag_axi_0/inst/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0] (the first 15 of 61 listed).
+Related violations: <none>
+
+REQP-28#1 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_mid_1_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#2 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_mid_2_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#3 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_upper_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#4 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[0].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#5 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[1].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#6 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[2].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#7 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[3].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#8 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_mid_1_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#9 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_mid_2_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#10 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_upper_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#11 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[0].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#12 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[1].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#13 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[2].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-28#14 Advisory
+enum_USE_MULT_NONE_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[3].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 USE_MULT attribute is set to NONE, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#1 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_mid_1_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#2 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_mid_2_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#3 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_upper_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#4 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[0].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#5 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[1].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#6 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[2].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#7 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[3].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#8 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_mid_1_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#9 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_mid_2_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#10 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_op_paths[0].g_combine.i_ext_mult/g_four_col_comb.i_upper_bits/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#11 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[0].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#12 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[1].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#13 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[2].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+REQP-30#14 Advisory
+enum_MREG_0_connects_CEM_GND  
+axi_spi_top_i/ddc_spec_0/inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[3].g_accum.i_accum/i_add_accum/g_dsp48.g_dsp48e1.i_dsp48e1: When the DSP48E1 MREG attribute is set to 0, the CEM input pin should be tied to GND to save power.
+Related violations: <none>
+
+

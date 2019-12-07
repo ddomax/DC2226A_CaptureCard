@@ -1,0 +1,1229 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Feb 17 02:10:25 2019
+# Process ID: 18824
+# Current directory: D:/Vivado2018_wrk/axi_spi/axi_spi.runs/axi_spi_top_ddc_spec_0_1_synth_1
+# Command line: vivado.exe -log axi_spi_top_ddc_spec_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_spi_top_ddc_spec_0_1.tcl
+# Log file: D:/Vivado2018_wrk/axi_spi/axi_spi.runs/axi_spi_top_ddc_spec_0_1_synth_1/axi_spi_top_ddc_spec_0_1.vds
+# Journal file: D:/Vivado2018_wrk/axi_spi/axi_spi.runs/axi_spi_top_ddc_spec_0_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source axi_spi_top_ddc_spec_0_1.tcl -notrace
+Command: synth_design -top axi_spi_top_ddc_spec_0_1 -part xc7k325tffg900-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9688 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 420.391 ; gain = 105.156
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'axi_spi_top_ddc_spec_0_1' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/synth/axi_spi_top_ddc_spec_0_1.v:56]
+INFO: [Synth 8-6157] synthesizing module 'ddc_spec' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec.v:182]
+INFO: [Synth 8-6157] synthesizing module 'ddc_spec_default_clock_driver' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec.v:147]
+INFO: [Synth 8-6157] synthesizing module 'xlclockdriver' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/xlclockdriver_rd.v:22]
+	Parameter log_2_period bound to: 32'sb00000000000000000000000000000001 
+	Parameter period bound to: 32'sb00000000000000000000000000000001 
+	Parameter use_bufg bound to: 0 - type: integer 
+	Parameter pipeline_regs bound to: 32'sb00000000000000000000000000000101 
+	Parameter max_pipeline_regs bound to: 32'sb00000000000000000000000000001000 
+	Parameter num_pipeline_regs bound to: 32'sb00000000000000000000000000000101 
+	Parameter factor bound to: 32'sb00000000000000000000000000000101 
+	Parameter rem_pipeline_regs bound to: 32'sb00000000000000000000000000000001 
+	Parameter trunc_period bound to: 1'b1 
+	Parameter period_floor bound to: 32'sb00000000000000000000000000000010 
+	Parameter power_of_2_counter bound to: 32'sb00000000000000000000000000000001 
+	Parameter cnt_width bound to: 32'sb00000000000000000000000000000001 
+	Parameter clk_for_ce_pulse_minus1 bound to: 1'b0 
+	Parameter clk_for_ce_pulse_minus2 bound to: 1'b0 
+	Parameter clk_for_ce_pulse_minus_regs bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'synth_reg_w_init' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/synth_reg_w_init.v:3]
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 1'b0 
+	Parameter latency bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'single_reg_w_init' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/synth_reg_w_init.v:45]
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 1'b0 
+	Parameter init_index_val bound to: 1'b0 
+	Parameter result bound to: 1'b0 
+	Parameter init_const bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:3966]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (1#1) [C:/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:3966]
+INFO: [Synth 8-6155] done synthesizing module 'single_reg_w_init' (2#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/synth_reg_w_init.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'synth_reg_w_init' (3#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/synth_reg_w_init.v:3]
+WARNING: [Synth 8-6014] Unused sequential element clk_num_reg was removed.  [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/xlclockdriver_rd.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'xlclockdriver' (4#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/xlclockdriver_rd.v:22]
+WARNING: [Synth 8-350] instance 'clockdriver_x0' of module 'xlclockdriver' requires 7 connections, but only 5 given [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec.v:160]
+INFO: [Synth 8-6157] synthesizing module 'xlclockdriver__parameterized0' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/xlclockdriver_rd.v:22]
+	Parameter log_2_period bound to: 32'sb00000000000000000000000000000100 
+	Parameter period bound to: 32'sb00000000000000000000000000001010 
+	Parameter use_bufg bound to: 0 - type: integer 
+	Parameter pipeline_regs bound to: 32'sb00000000000000000000000000000101 
+	Parameter max_pipeline_regs bound to: 32'sb00000000000000000000000000001000 
+	Parameter num_pipeline_regs bound to: 32'sb00000000000000000000000000000101 
+	Parameter factor bound to: 32'sb00000000000000000000000000000000 
+	Parameter rem_pipeline_regs bound to: 32'sb00000000000000000000000000000110 
+	Parameter trunc_period bound to: 4'b0110 
+	Parameter period_floor bound to: 32'sb00000000000000000000000000001010 
+	Parameter power_of_2_counter bound to: 32'sb00000000000000000000000000000000 
+	Parameter cnt_width bound to: 32'sb00000000000000000000000000000100 
+	Parameter clk_for_ce_pulse_minus1 bound to: 4'b1000 
+	Parameter clk_for_ce_pulse_minus2 bound to: 4'b0111 
+	Parameter clk_for_ce_pulse_minus_regs bound to: 4'b0100 
+INFO: [Synth 8-6157] synthesizing module 'synth_reg_w_init__parameterized0' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/synth_reg_w_init.v:3]
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 1'b0 
+	Parameter latency bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'synth_reg_w_init__parameterized0' (4#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/synth_reg_w_init.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'xlclockdriver__parameterized0' (4#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/xlclockdriver_rd.v:22]
+WARNING: [Synth 8-350] instance 'clockdriver' of module 'xlclockdriver' requires 7 connections, but only 5 given [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec.v:171]
+INFO: [Synth 8-6155] done synthesizing module 'ddc_spec_default_clock_driver' (5#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec.v:147]
+INFO: [Synth 8-6157] synthesizing module 'ddc_spec_struct' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec.v:7]
+INFO: [Synth 8-6157] synthesizing module 'xldds_compiler_fc00dd52bad5761224623366bf08b3db' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec_entity_declarations.v:40]
+INFO: [Synth 8-638] synthesizing module 'ddc_spec_dds_compiler_v6_0_i0' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/synth/ddc_spec_dds_compiler_v6_0_i0.vhd:70]
+WARNING: [Synth 8-5640] Port 'debug_axi_pinc_in' is missing in component declaration [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/synth/ddc_spec_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_axi_poff_in' is missing in component declaration [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/synth/ddc_spec_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_axi_resync_in' is missing in component declaration [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/synth/ddc_spec_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_axi_chan_in' is missing in component declaration [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/synth/ddc_spec_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_core_nd' is missing in component declaration [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/synth/ddc_spec_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_phase' is missing in component declaration [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/synth/ddc_spec_dds_compiler_v6_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'debug_phase_nd' is missing in component declaration [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/synth/ddc_spec_dds_compiler_v6_0_i0.vhd:73]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_MODE_OF_OPERATION bound to: 0 - type: integer 
+	Parameter C_MODULUS bound to: 9 - type: integer 
+	Parameter C_ACCUMULATOR_WIDTH bound to: 27 - type: integer 
+	Parameter C_CHANNELS bound to: 1 - type: integer 
+	Parameter C_HAS_PHASE_OUT bound to: 0 - type: integer 
+	Parameter C_HAS_PHASEGEN bound to: 1 - type: integer 
+	Parameter C_HAS_SINCOS bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 7 - type: integer 
+	Parameter C_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_NEGATIVE_COSINE bound to: 0 - type: integer 
+	Parameter C_NEGATIVE_SINE bound to: 1 - type: integer 
+	Parameter C_NOISE_SHAPING bound to: 0 - type: integer 
+	Parameter C_OUTPUTS_REQUIRED bound to: 2 - type: integer 
+	Parameter C_OUTPUT_FORM bound to: 0 - type: integer 
+	Parameter C_OUTPUT_WIDTH bound to: 15 - type: integer 
+	Parameter C_PHASE_ANGLE_WIDTH bound to: 15 - type: integer 
+	Parameter C_PHASE_INCREMENT bound to: 1 - type: integer 
+	Parameter C_PHASE_INCREMENT_VALUE bound to: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 - type: string 
+	Parameter C_RESYNC bound to: 0 - type: integer 
+	Parameter C_PHASE_OFFSET bound to: 0 - type: integer 
+	Parameter C_PHASE_OFFSET_VALUE bound to: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 - type: string 
+	Parameter C_OPTIMISE_GOAL bound to: 0 - type: integer 
+	Parameter C_USE_DSP48 bound to: 0 - type: integer 
+	Parameter C_POR_MODE bound to: 0 - type: integer 
+	Parameter C_AMPLITUDE bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_HAS_S_PHASE bound to: 0 - type: integer 
+	Parameter C_S_PHASE_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_PHASE_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_PHASE_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_S_CONFIG bound to: 1 - type: integer 
+	Parameter C_S_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_S_CONFIG_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_M_DATA bound to: 1 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_M_PHASE bound to: 0 - type: integer 
+	Parameter C_M_PHASE_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_PHASE_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_PHASE_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_CHAN_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'dds_compiler_v6_0_16' declared at 'd:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/hdl/dds_compiler_v6_0_vh_rfs.vhd:47294' bound to instance 'U0' of component 'dds_compiler_v6_0_16' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/synth/ddc_spec_dds_compiler_v6_0_i0.vhd:177]
+INFO: [Synth 8-256] done synthesizing module 'ddc_spec_dds_compiler_v6_0_i0' (14#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/synth/ddc_spec_dds_compiler_v6_0_i0.vhd:70]
+INFO: [Synth 8-6155] done synthesizing module 'xldds_compiler_fc00dd52bad5761224623366bf08b3db' (15#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec_entity_declarations.v:40]
+INFO: [Synth 8-6157] synthesizing module 'ddc_spec_xlmult' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec_entity_declarations.v:111]
+	Parameter core_name0 bound to: ddc_spec_mult_gen_v12_0_i0 - type: string 
+	Parameter a_width bound to: 14 - type: integer 
+	Parameter a_bin_pt bound to: 13 - type: integer 
+	Parameter a_arith bound to: 2 - type: integer 
+	Parameter b_width bound to: 15 - type: integer 
+	Parameter b_bin_pt bound to: 14 - type: integer 
+	Parameter b_arith bound to: 2 - type: integer 
+	Parameter p_width bound to: 29 - type: integer 
+	Parameter p_bin_pt bound to: 27 - type: integer 
+	Parameter p_arith bound to: 2 - type: integer 
+	Parameter rst_width bound to: 1 - type: integer 
+	Parameter rst_bin_pt bound to: 0 - type: integer 
+	Parameter rst_arith bound to: 1 - type: integer 
+	Parameter en_width bound to: 1 - type: integer 
+	Parameter en_bin_pt bound to: 0 - type: integer 
+	Parameter en_arith bound to: 1 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter extra_registers bound to: 0 - type: integer 
+	Parameter c_a_width bound to: 14 - type: integer 
+	Parameter c_b_width bound to: 15 - type: integer 
+	Parameter c_type bound to: 0 - type: integer 
+	Parameter c_a_type bound to: 0 - type: integer 
+	Parameter c_b_type bound to: 0 - type: integer 
+	Parameter c_baat bound to: 14 - type: integer 
+	Parameter oversample bound to: 1 - type: integer 
+	Parameter multsign bound to: 2 - type: integer 
+	Parameter c_output_width bound to: 29 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ddc_spec_mult_gen_v12_0_i0' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_mult_gen_v12_0_i0/synth/ddc_spec_mult_gen_v12_0_i0.vhd:70]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_mult_gen_v12_0_i0/synth/ddc_spec_mult_gen_v12_0_i0.vhd:73]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_mult_gen_v12_0_i0/synth/ddc_spec_mult_gen_v12_0_i0.vhd:73]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_HAS_CE bound to: 1 - type: integer 
+	Parameter C_HAS_SCLR bound to: 1 - type: integer 
+	Parameter C_LATENCY bound to: 1 - type: integer 
+	Parameter C_A_WIDTH bound to: 14 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 15 - type: integer 
+	Parameter C_B_TYPE bound to: 0 - type: integer 
+	Parameter C_OUT_HIGH bound to: 28 - type: integer 
+	Parameter C_OUT_LOW bound to: 0 - type: integer 
+	Parameter C_MULT_TYPE bound to: 1 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 1 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 10000001 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_14' declared at 'd:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_dds_compiler_v6_0_i0/hdl/mult_gen_v12_0_vh_rfs.vhd:21013' bound to instance 'U0' of component 'mult_gen_v12_0_14' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_mult_gen_v12_0_i0/synth/ddc_spec_mult_gen_v12_0_i0.vhd:127]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-256] done synthesizing module 'ddc_spec_mult_gen_v12_0_i0' (21#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_mult_gen_v12_0_i0/synth/ddc_spec_mult_gen_v12_0_i0.vhd:70]
+INFO: [Synth 8-6157] synthesizing module 'zero_ext' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:186]
+	Parameter old_width bound to: 14 - type: integer 
+	Parameter new_width bound to: 14 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'zero_ext' (22#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:186]
+INFO: [Synth 8-6157] synthesizing module 'zero_ext__parameterized0' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:186]
+	Parameter old_width bound to: 15 - type: integer 
+	Parameter new_width bound to: 15 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'zero_ext__parameterized0' (22#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:186]
+INFO: [Synth 8-6157] synthesizing module 'convert_type' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:775]
+	Parameter old_width bound to: 29 - type: integer 
+	Parameter old_bin_pt bound to: 32'sb00000000000000000000000000011011 
+	Parameter old_arith bound to: 2 - type: integer 
+	Parameter new_width bound to: 29 - type: integer 
+	Parameter new_bin_pt bound to: 27 - type: integer 
+	Parameter new_arith bound to: 2 - type: integer 
+	Parameter quantization bound to: 1 - type: integer 
+	Parameter overflow bound to: 1 - type: integer 
+	Parameter fp_width bound to: 32'sb00000000000000000000000000011111 
+	Parameter fp_bin_pt bound to: 32'sb00000000000000000000000000011011 
+	Parameter fp_arith bound to: 2 - type: integer 
+	Parameter q_width bound to: 32'sb00000000000000000000000000011111 
+	Parameter q_bin_pt bound to: 27 - type: integer 
+	Parameter q_arith bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'trunc' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:539]
+	Parameter old_width bound to: 32'sb00000000000000000000000000011111 
+	Parameter old_bin_pt bound to: 32'sb00000000000000000000000000011011 
+	Parameter old_arith bound to: 2 - type: integer 
+	Parameter new_width bound to: 32'sb00000000000000000000000000011111 
+	Parameter new_bin_pt bound to: 27 - type: integer 
+	Parameter new_arith bound to: 2 - type: integer 
+	Parameter right_of_dp bound to: 32'sb00000000000000000000000000000000 
+	Parameter abs_right_of_dp bound to: 32'sb00000000000000000000000000000000 
+INFO: [Synth 8-6157] synthesizing module 'extend_msb' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:235]
+	Parameter old_width bound to: 32'sb00000000000000000000000000011111 
+	Parameter new_width bound to: 32'sb00000000000000000000000000011111 
+	Parameter new_arith bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sign_ext' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:211]
+	Parameter old_width bound to: 32'sb00000000000000000000000000011111 
+	Parameter new_width bound to: 32'sb00000000000000000000000000011111 
+INFO: [Synth 8-6155] done synthesizing module 'sign_ext' (23#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:211]
+INFO: [Synth 8-6155] done synthesizing module 'extend_msb' (24#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:235]
+INFO: [Synth 8-6155] done synthesizing module 'trunc' (25#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:539]
+INFO: [Synth 8-6157] synthesizing module 'wrap_arith' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:754]
+	Parameter old_width bound to: 32'sb00000000000000000000000000011111 
+	Parameter old_bin_pt bound to: 27 - type: integer 
+	Parameter old_arith bound to: 2 - type: integer 
+	Parameter new_width bound to: 29 - type: integer 
+	Parameter new_bin_pt bound to: 27 - type: integer 
+	Parameter new_arith bound to: 2 - type: integer 
+	Parameter result_arith bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'cast' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:13]
+	Parameter old_width bound to: 32'sb00000000000000000000000000011111 
+	Parameter old_bin_pt bound to: 27 - type: integer 
+	Parameter new_width bound to: 29 - type: integer 
+	Parameter new_bin_pt bound to: 27 - type: integer 
+	Parameter new_arith bound to: 2 - type: integer 
+	Parameter right_of_dp bound to: 32'sb00000000000000000000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'cast' (26#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'wrap_arith' (27#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:754]
+INFO: [Synth 8-6157] synthesizing module 'cast__parameterized0' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:13]
+	Parameter old_width bound to: 29 - type: integer 
+	Parameter old_bin_pt bound to: 32'sb00000000000000000000000000011011 
+	Parameter new_width bound to: 32'sb00000000000000000000000000011111 
+	Parameter new_bin_pt bound to: 32'sb00000000000000000000000000011011 
+	Parameter new_arith bound to: 2 - type: integer 
+	Parameter right_of_dp bound to: 32'sb00000000000000000000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'cast__parameterized0' (27#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'convert_type' (28#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/convert_type.v:775]
+INFO: [Synth 8-6155] done synthesizing module 'ddc_spec_xlmult' (29#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec_entity_declarations.v:111]
+INFO: [Synth 8-6157] synthesizing module 'xlddc_spec_fir_compiler_v7_2_i0_5f7997cbeddee1206a333b3c0408243c' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec_entity_declarations.v:69]
+INFO: [Synth 8-6157] synthesizing module 'synth_reg_w_init__parameterized1' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/synth_reg_w_init.v:3]
+	Parameter width bound to: 62 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 62'b00000000000000000000000000000000000000000000000000000000000000 
+	Parameter latency bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'single_reg_w_init__parameterized0' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/synth_reg_w_init.v:45]
+	Parameter width bound to: 62 - type: integer 
+	Parameter init_index bound to: 0 - type: integer 
+	Parameter init_value bound to: 62'b00000000000000000000000000000000000000000000000000000000000000 
+	Parameter init_index_val bound to: 1'b0 
+	Parameter result bound to: 62'b00000000000000000000000000000000000000000000000000000000000000 
+	Parameter init_const bound to: 62'b00000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'single_reg_w_init__parameterized0' (29#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/synth_reg_w_init.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'synth_reg_w_init__parameterized1' (29#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/synth_reg_w_init.v:3]
+INFO: [Synth 8-638] synthesizing module 'ddc_spec_fir_compiler_v7_2_i0' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_fir_compiler_v7_2_i0/synth/ddc_spec_fir_compiler_v7_2_i0.vhd:71]
+	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_COMPONENT_NAME bound to: ddc_spec_fir_compiler_v7_2_i0 - type: string 
+	Parameter C_COEF_FILE bound to: ddc_spec_fir_compiler_v7_2_i0.mif - type: string 
+	Parameter C_COEF_FILE_LINES bound to: 1040 - type: integer 
+	Parameter C_FILTER_TYPE bound to: 1 - type: integer 
+	Parameter C_INTERP_RATE bound to: 1 - type: integer 
+	Parameter C_DECIM_RATE bound to: 10 - type: integer 
+	Parameter C_ZERO_PACKING_FACTOR bound to: 1 - type: integer 
+	Parameter C_SYMMETRY bound to: 1 - type: integer 
+	Parameter C_NUM_FILTS bound to: 1 - type: integer 
+	Parameter C_NUM_TAPS bound to: 1025 - type: integer 
+	Parameter C_NUM_CHANNELS bound to: 1 - type: integer 
+	Parameter C_CHANNEL_PATTERN bound to: fixed - type: string 
+	Parameter C_ROUND_MODE bound to: 0 - type: integer 
+	Parameter C_COEF_RELOAD bound to: 0 - type: integer 
+	Parameter C_NUM_RELOAD_SLOTS bound to: 1 - type: integer 
+	Parameter C_COL_MODE bound to: 1 - type: integer 
+	Parameter C_COL_PIPE_LEN bound to: 4 - type: integer 
+	Parameter C_COL_CONFIG bound to: 52 - type: string 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_DATA_PATH_WIDTHS bound to: 14,14,15,15 - type: string 
+	Parameter C_DATA_IP_PATH_WIDTHS bound to: 29 - type: string 
+	Parameter C_DATA_PX_PATH_WIDTHS bound to: 29 - type: string 
+	Parameter C_DATA_WIDTH bound to: 29 - type: integer 
+	Parameter C_COEF_PATH_WIDTHS bound to: 14,18,14,18 - type: string 
+	Parameter C_COEF_WIDTH bound to: 32 - type: integer 
+	Parameter C_DATA_PATH_SRC bound to: 0,0,2,2 - type: string 
+	Parameter C_COEF_PATH_SRC bound to: 0,1,0,1 - type: string 
+	Parameter C_PX_PATH_SRC bound to: 0,1,2,3 - type: string 
+	Parameter C_DATA_PATH_SIGN bound to: 1,1,0,0 - type: string 
+	Parameter C_COEF_PATH_SIGN bound to: 1,0,1,0 - type: string 
+	Parameter C_ACCUM_PATH_WIDTHS bound to: 40,34,40,34 - type: string 
+	Parameter C_OUTPUT_WIDTH bound to: 62 - type: integer 
+	Parameter C_OUTPUT_PATH_WIDTHS bound to: 62 - type: string 
+	Parameter C_ACCUM_OP_PATH_WIDTHS bound to: 62 - type: string 
+	Parameter C_EXT_MULT_CNFG bound to: 0,1,2,3,0,14,14,28 - type: string 
+	Parameter C_DATA_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_OP_PATH_PSAMP_SRC bound to: 0 - type: string 
+	Parameter C_NUM_MADDS bound to: 52 - type: integer 
+	Parameter C_OPT_MADDS bound to: none;none - type: string 
+	Parameter C_OVERSAMPLING_RATE bound to: 1 - type: integer 
+	Parameter C_INPUT_RATE bound to: 1 - type: integer 
+	Parameter C_OUTPUT_RATE bound to: 10 - type: integer 
+	Parameter C_DATA_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_COEF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_IPBUFF_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_OPBUFF_MEMTYPE bound to: 0 - type: integer 
+	Parameter C_DATAPATH_MEMTYPE bound to: 2 - type: integer 
+	Parameter C_MEM_ARRANGEMENT bound to: 1 - type: integer 
+	Parameter C_DATA_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_COEF_MEM_PACKING bound to: 0 - type: integer 
+	Parameter C_FILTS_PACKED bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 65 - type: integer 
+	Parameter C_HAS_ARESETn bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_DATA_HAS_TLAST bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_FIFO bound to: 0 - type: integer 
+	Parameter C_S_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_S_DATA_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_DATA_HAS_TREADY bound to: 0 - type: integer 
+	Parameter C_M_DATA_HAS_TUSER bound to: 0 - type: integer 
+	Parameter C_M_DATA_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_CONFIG_CHANNEL bound to: 0 - type: integer 
+	Parameter C_CONFIG_SYNC_MODE bound to: 0 - type: integer 
+	Parameter C_CONFIG_PACKET_SIZE bound to: 0 - type: integer 
+	Parameter C_CONFIG_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_RELOAD_TDATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'fir_compiler_v7_2_11' declared at 'd:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_fir_compiler_v7_2_i0/hdl/fir_compiler_v7_2_vh_rfs.vhd:61141' bound to instance 'U0' of component 'fir_compiler_v7_2_11' [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_fir_compiler_v7_2_i0/synth/ddc_spec_fir_compiler_v7_2_i0.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'ddc_spec_fir_compiler_v7_2_i0' (44#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_fir_compiler_v7_2_i0/synth/ddc_spec_fir_compiler_v7_2_i0.vhd:71]
+INFO: [Synth 8-6155] done synthesizing module 'xlddc_spec_fir_compiler_v7_2_i0_5f7997cbeddee1206a333b3c0408243c' (45#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec_entity_declarations.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'ddc_spec_struct' (46#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'ddc_spec' (47#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ipshared/146c/hdl/ddc_spec.v:182]
+INFO: [Synth 8-6155] done synthesizing module 'axi_spi_top_ddc_spec_0_1' (48#1) [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/synth/axi_spi_top_ddc_spec_0_1.v:56]
+WARNING: [Synth 8-3331] design delay__parameterized128 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized128 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design buff__parameterized2 has unconnected port RE
+WARNING: [Synth 8-3331] design buff__parameterized2 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized62 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized62 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design buff__parameterized0 has unconnected port RE
+WARNING: [Synth 8-3331] design buff__parameterized0 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized65 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized126 has unconnected port WE
+WARNING: [Synth 8-3331] design delay__parameterized126 has unconnected port CE
+WARNING: [Synth 8-3331] design delay__parameterized126 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized126 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized126 has unconnected port CLK
+WARNING: [Synth 8-3331] design delay__parameterized74 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized74 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design buff__parameterized1 has unconnected port RE
+WARNING: [Synth 8-3331] design buff__parameterized1 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized125 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized124 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized124 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized123 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized123 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized122 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized122 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized121 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized121 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized120 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized120 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized119 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized119 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized118 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized118 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized117 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized117 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized116 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized116 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized115 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized115 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized114 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized114 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized113 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized113 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized112 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized112 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized111 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized111 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized110 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized110 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized109 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized109 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized108 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized108 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized107 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized107 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized106 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized106 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized105 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized105 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized104 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized104 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized103 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized103 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized102 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized102 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized101 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized101 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized100 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized100 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized99 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized99 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized98 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized98 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized97 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized97 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized96 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized96 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized95 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized95 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized94 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized94 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized93 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized93 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized92 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized92 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized91 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized91 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized90 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized90 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized89 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized89 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized88 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized88 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized87 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized87 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized86 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized86 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized85 has unconnected port SCLR
+WARNING: [Synth 8-3331] design delay__parameterized85 has unconnected port SCLR_ALT
+WARNING: [Synth 8-3331] design delay__parameterized84 has unconnected port SCLR
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 850.012 ; gain = 534.777
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 850.012 ; gain = 534.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 850.012 ; gain = 534.777
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 430 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_fir_compiler_v7_2_i0/constraints/fir_compiler_v7_2.xdc] for cell 'inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0'
+Finished Parsing XDC File [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_fir_compiler_v7_2_i0/constraints/fir_compiler_v7_2.xdc] for cell 'inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0'
+Parsing XDC File [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_fir_compiler_v7_2_i0/constraints/fir_compiler_v7_2.xdc] for cell 'inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0'
+Finished Parsing XDC File [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/ddc_spec_fir_compiler_v7_2_i0/constraints/fir_compiler_v7_2.xdc] for cell 'inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0'
+Parsing XDC File [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/constrs/ddc_spec.xdc] for cell 'inst'
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/constrs/ddc_spec.xdc:4]
+Finished Parsing XDC File [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/constrs/ddc_spec.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/constrs/ddc_spec.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/axi_spi_top_ddc_spec_0_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/axi_spi_top_ddc_spec_0_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Vivado2018_wrk/axi_spi/axi_spi.runs/axi_spi_top_ddc_spec_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Vivado2018_wrk/axi_spi/axi_spi.runs/axi_spi_top_ddc_spec_0_1_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Vivado2018_wrk/axi_spi/axi_spi.runs/axi_spi_top_ddc_spec_0_1_synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/axi_spi_top_ddc_spec_0_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/axi_spi_top_ddc_spec_0_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1524.199 ; gain = 69.207
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:02:57 ; elapsed = 00:02:55 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:57 ; elapsed = 00:02:55 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst/ddc_spec_struct/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ddc_spec_struct/mult/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ddc_spec_struct/mult1/\comp0.core_instance0 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/ddc_spec_struct/digital_fir_filter/ddc_spec_fir_compiler_v7_2_i0_instance/U0. (constraint file  D:/Vivado2018_wrk/axi_spi/axi_spi.runs/axi_spi_top_ddc_spec_0_1_synth_1/dont_touch.xdc, line 17).
+Applied set_property DONT_TOUCH = true for inst/ddc_spec_struct/digital_fir_filter1/ddc_spec_fir_compiler_v7_2_i0_instance/U0. (constraint file  D:/Vivado2018_wrk/axi_spi/axi_spi.runs/axi_spi_top_ddc_spec_0_1_synth_1/dont_touch.xdc, line 17).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  D:/Vivado2018_wrk/axi_spi/axi_spi.runs/axi_spi_top_ddc_spec_0_1_synth_1/dont_touch.xdc, line 21).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:58 ; elapsed = 00:02:55 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "temp_ce_vec" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5547] Trying to map ROM "sin_cos_lut" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-5547] Trying to map ROM "sin_cos_lut" into Block RAM due to explicit "ram_style" or "rom_style" specification
+WARNING: [Synth 8-6040] Register i_rtl.i_quarter_table.i_has_sin.i_addr_mod_stage1.mod_sin_addr_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register i_rtl.i_quarter_table.i_has_cos.i_addr_mod_stage1.mod_cos_addr_reg driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5546] ROM "add" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5546] ROM "add" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "add" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "add" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:08 ; elapsed = 00:03:07 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/ddc_spec_struct/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_phase_final_speedup' (xbip_pipe_v3_0_5_viv__parameterized9) to 'inst/ddc_spec_struct/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_fabric.i_ph_adj_pipe'
+INFO: [Synth 8-223] decloning instance 'inst/ddc_spec_struct/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_phase_final_speedup' (xbip_pipe_v3_0_5_viv__parameterized9) to 'inst/ddc_spec_struct/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_dds/I_PHASEGEN.i_conventional_accum.i_fabric.i_dither_pipe'
+INFO: [Synth 8-223] decloning instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.i_cntrl_coeff_addr' (delay__parameterized1) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_cntrl[0].g_sym_cntrl.g_coef_addr_delay.i_coef_addr_delay'
+INFO: [Synth 8-223] decloning instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.i_cntrl_coeff_addr' (delay__parameterized1) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_cntrl[1].g_sym_cntrl.g_coef_addr_delay.i_coef_addr_delay'
+INFO: [Synth 8-223] decloning instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_cntrl[0].g_sym_cntrl.i_delay' (cntrl_delay) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_cntrl[1].g_sym_cntrl.i_delay'
+INFO: [Synth 8-223] decloning instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[0].g_symmetric.g_madds[51].g_add_bypass.i_pre_add_bypass' (delay__parameterized65) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[1].g_symmetric.g_madds[51].g_add_bypass.i_pre_add_bypass'
+INFO: [Synth 8-223] decloning instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[0].g_symmetric.g_madds[51].g_add_bypass.i_pre_add_bypass' (delay__parameterized65) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[2].g_symmetric.g_madds[51].g_add_bypass.i_pre_add_bypass'
+INFO: [Synth 8-223] decloning instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[0].g_symmetric.g_madds[51].g_add_bypass.i_pre_add_bypass' (delay__parameterized65) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimation/g_parallel.g_paths[3].g_symmetric.g_madds[51].g_add_bypass.i_pre_add_bypass'
+
+Report RTL Partitions: 
++------+----------------------------------------+------------+----------+
+|      |RTL Partition                           |Replication |Instances |
++------+----------------------------------------+------------+----------+
+|1     |polyphase_decimation__GB0               |           1|     30588|
+|2     |polyphase_decimation__GB1               |           1|      8196|
+|3     |polyphase_decimation__GB2               |           1|      9948|
+|4     |polyphase_decimation__GB3               |           1|     12205|
+|5     |polyphase_decimation__GB4               |           1|     15248|
+|6     |synth_reg_w_init__parameterized1__2__GU |           1|        62|
+|7     |synth_reg_w_init__parameterized1__GU    |           1|        62|
+|8     |ddc_spec_struct__GC0                    |           1|       534|
+|9     |ddc_spec_default_clock_driver           |           1|        34|
++------+----------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "clockdriver/temp_ce_vec" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Common 17-14] Message 'Synth 8-5542' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Common 17-14] Message 'Synth 8-5587' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (clockdriver_x0/clr_reg/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module ddc_spec_default_clock_driver.
+WARNING: [Synth 8-3332] Sequential element (clockdriver/pipelined_ce.ce_pipeline_logic[0].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module ddc_spec_default_clock_driver.
+WARNING: [Synth 8-3332] Sequential element (clockdriver/pipelined_ce.ce_pipeline_logic[1].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module ddc_spec_default_clock_driver.
+WARNING: [Synth 8-3332] Sequential element (clockdriver/pipelined_ce.ce_pipeline_logic[2].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module ddc_spec_default_clock_driver.
+WARNING: [Synth 8-3332] Sequential element (clockdriver/pipelined_ce.ce_pipeline_logic[3].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module ddc_spec_default_clock_driver.
+WARNING: [Synth 8-3332] Sequential element (clockdriver/pipelined_ce.ce_pipeline_logic[4].ce_reg_logic/has_latency.fd_array[1].reg_comp_1/fd_prim_array[0].rst_comp.fdre_comp) is unused and will be removed from module ddc_spec_default_clock_driver.
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[0].g_mem_array[25].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[5]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[0].g_mem_array[25].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[9]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[25].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[0].g_mem_array[25].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[5]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[0].g_mem_array[25].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[11]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[0].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[8]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[0].g_mem_array[24].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[11]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[24].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[10]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[10]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[23].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[10]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[10]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[22].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[9]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[10]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[0].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[2]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[0].g_mem_array[21].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[12]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[9]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[10]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[21].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[9]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[10]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[9]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[10]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[20].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[8]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[9]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[10]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[15]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[16]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[8]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[9]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[10]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[11]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[12]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[13]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[14]' (FDE) to 'fir_compiler_v7_2_11:/i_synth/g_polyphase_decimation.i_polyphase_decimationi_0/g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a/gen_dram.gen_rom.d_out_reg[17]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[19].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[0].g_mem_array[18].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[17].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[17].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[15].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[15].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[13].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[13].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[11].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[11].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[9].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[9].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[7].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[7].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[5].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[5].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[3].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[0].g_mem_array[3].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[3].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[0].g_mem_array[3].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[1].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[0].g_mem_array[1].i_mem/g_individual.g_mem_b.i_mem_b /\gen_dram.gen_rom.d_out_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[1].g_mem_array[1].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_paths[0].g_mem_array[1].i_mem/g_individual.i_mem_a /\gen_dram.gen_rom.d_out_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_accum_cntrl.accum_opcode_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_accum_cntrl.accum_opcode_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_accum_cntrl.accum_opcode_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_accum_cntrl.accum_opcode_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_accum_cntrl.accum_opcode_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_accum_cntrl.accum_opcode_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_accum_cntrl.accum_opcode_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_0 /\g_parallel.g_accum_cntrl.accum_opcode_reg[2] )
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[13]) is unused and will be removed from module sp_mem__parameterized1.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[13]) is unused and will be removed from module sp_mem__parameterized2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[13]) is unused and will be removed from module sp_mem__parameterized5.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[13]) is unused and will be removed from module sp_mem__parameterized6.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[8]) is unused and will be removed from module sp_mem__parameterized36.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized53__4.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized53.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized53__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized53__3.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized55.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized56.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized59.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized60.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized63.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized64.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized67.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized68.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized71.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized72.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized75.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized76.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized79.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized80.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized83.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized84.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized87.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized88.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized91.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized92.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized95.
+INFO: [Synth 8-3332] Sequential element (gen_dram.gen_rom.d_out_reg[17]) is unused and will be removed from module sp_mem__parameterized96.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[14]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[13]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[12]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[11]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[10]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[9]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[8]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[7]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[6]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[5]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[4]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[3]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[2]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[1]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[0]) is unused and will be removed from module dpr_mem__parameterized0__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[13]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[12]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[11]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[10]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[9]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[8]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[7]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[6]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[5]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[4]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[3]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[2]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[1]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[0]) is unused and will be removed from module dpr_mem__2.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (fir_compiler_v7_2_11:/i_synth/\g_polyphase_decimation.i_polyphase_decimationi_3 /\g_m_data_chan_no_fifo.m_axis_data_tlast_int_reg )
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[14]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[13]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[12]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[11]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[10]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[9]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[8]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[7]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[6]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[5]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[4]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[3]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[2]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[1]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_a_reg[0]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[14]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[13]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[12]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[11]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[10]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[9]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[8]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[7]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[6]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[5]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[4]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[3]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[2]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[1]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (gen_dram.d_out_b_reg[0]) is unused and will be removed from module dpr_mem__parameterized0.
+INFO: [Synth 8-3332] Sequential element (first_phase_reg) is unused and will be removed from module wrap_buff__parameterized0.
+INFO: [Synth 8-3332] Sequential element (i_bypass_phase/gen_reg.d_reg_reg[0]) is unused and will be removed from module wrap_buff__parameterized0.
+INFO: [Synth 8-3332] Sequential element (mem_out_reg_reg[14]) is unused and will be removed from module wrap_buff__parameterized0.
+INFO: [Synth 8-3332] Sequential element (mem_out_reg_reg[13]) is unused and will be removed from module wrap_buff__parameterized0.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:48 ; elapsed = 00:03:48 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/ddc_spec_structi_0/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_0/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/ddc_spec_structi_0/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_0/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/ddc_spec_structi_0/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_0/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/ddc_spec_structi_0/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_0/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_sin_RAM_op_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/ddc_spec_structi_0/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_1/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_cos_RAM_op_reg_0 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/ddc_spec_structi_0/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_1/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_cos_RAM_op_reg_1 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/ddc_spec_structi_0/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_1/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_cos_RAM_op_reg_2 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/ddc_spec_structi_0/dds_compiler_6_0/ddc_spec_dds_compiler_v6_0_i0_instance/U0/i_synth/i_1/i_dds/I_SINCOS.i_std_rom.i_rom/i_rtl.i_quarter_table.i_block_rom.i_pipe_1.pre_asyn_cos_RAM_op_reg_3 (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++------+----------------------------------------+------------+----------+
+|      |RTL Partition                           |Replication |Instances |
++------+----------------------------------------+------------+----------+
+|1     |polyphase_decimation__GB0               |           2|     31095|
+|2     |polyphase_decimation__GB1               |           2|      8176|
+|3     |polyphase_decimation__GB2               |           2|      9857|
+|4     |polyphase_decimation__GB3               |           2|     12000|
+|5     |polyphase_decimation__GB4               |           2|     14779|
+|6     |synth_reg_w_init__parameterized1__2__GU |           1|        62|
+|7     |synth_reg_w_init__parameterized1__GU    |           1|        62|
+|8     |ddc_spec_struct__GC0                    |           1|       403|
+|9     |ddc_spec_default_clock_driver           |           1|        22|
++------+----------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:05 ; elapsed = 00:04:06 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:04:10 ; elapsed = 00:04:11 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------------------------+------------+----------+
+|      |RTL Partition                           |Replication |Instances |
++------+----------------------------------------+------------+----------+
+|1     |polyphase_decimation__GB0               |           2|     31095|
+|2     |polyphase_decimation__GB1               |           2|      8176|
+|3     |polyphase_decimation__GB2               |           2|      9857|
+|4     |polyphase_decimation__GB3               |           2|     12000|
+|5     |polyphase_decimation__GB4               |           2|     14779|
+|6     |synth_reg_w_init__parameterized1__2__GU |           1|        62|
+|7     |synth_reg_w_init__parameterized1__GU    |           1|        62|
+|8     |ddc_spec_struct__GC0                    |           1|       403|
+|9     |ddc_spec_default_clock_driver           |           1|        22|
++------+----------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:59 ; elapsed = 00:05:01 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:05:02 ; elapsed = 00:05:03 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:02 ; elapsed = 00:05:04 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:07 ; elapsed = 00:05:08 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:07 ; elapsed = 00:05:08 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:08 ; elapsed = 00:05:09 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:08 ; elapsed = 00:05:09 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |     7|
+|2     |DSP48E1    |    14|
+|3     |DSP48E1_1  |   416|
+|4     |DSP48E1_2  |     2|
+|5     |LUT1       |    20|
+|6     |LUT2       |   381|
+|7     |LUT3       |   653|
+|8     |LUT4       |  1412|
+|9     |LUT5       |    51|
+|10    |LUT6       |    47|
+|11    |RAM32X1D   |    58|
+|12    |RAMB18E1_1 |     1|
+|13    |RAMB36E1_3 |     1|
+|14    |RAMB36E1_4 |     1|
+|15    |RAMB36E1_5 |     1|
+|16    |SRL16E     |  7269|
+|17    |SRLC32E    |  3028|
+|18    |FDRE       | 12426|
+|19    |FDSE       |     4|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:08 ; elapsed = 00:05:09 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:17 ; elapsed = 00:03:39 . Memory (MB): peak = 1524.199 ; gain = 534.777
+Synthesis Optimization Complete : Time (s): cpu = 00:05:08 ; elapsed = 00:05:09 . Memory (MB): peak = 1524.199 ; gain = 1208.965
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 501 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 58 instances were transformed.
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 58 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+535 Infos, 122 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:05:29 ; elapsed = 00:05:31 . Memory (MB): peak = 1524.199 ; gain = 1220.762
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado2018_wrk/axi_spi/axi_spi.runs/axi_spi_top_ddc_spec_0_1_synth_1/axi_spi_top_ddc_spec_0_1.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1524.199 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1524.199 ; gain = 0.000
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP d:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/ip/axi_spi_top_ddc_spec_0_1/axi_spi_top_ddc_spec_0_1.xci
+INFO: [Coretcl 2-1174] Renamed 2296 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado2018_wrk/axi_spi/axi_spi.runs/axi_spi_top_ddc_spec_0_1_synth_1/axi_spi_top_ddc_spec_0_1.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1524.199 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file axi_spi_top_ddc_spec_0_1_utilization_synth.rpt -pb axi_spi_top_ddc_spec_0_1_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.412 . Memory (MB): peak = 1524.199 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1524.199 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 17 02:16:55 2019...

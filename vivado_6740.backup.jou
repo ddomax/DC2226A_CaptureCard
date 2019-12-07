@@ -1,0 +1,611 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sun Feb 17 01:36:17 2019
+# Process ID: 6740
+# Current directory: D:/Vivado2018_wrk/axi_spi
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14256 D:\Vivado2018_wrk\axi_spi\axi_spi.xpr
+# Log file: D:/Vivado2018_wrk/axi_spi/vivado.log
+# Journal file: D:/Vivado2018_wrk/axi_spi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Vivado2018_wrk/axi_spi/axi_spi.xpr
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  D:/sysgen_workspace/netlist/ip_catalog [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  D:/sysgen_workspace [current_project]
+update_ip_catalog
+open_bd_design {D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/axi_spi_top.bd}
+startgroup
+create_bd_cell -type ip -vlnv User_Company:SysGen:ddc_spec:1.0 ddc_spec_0
+endgroup
+set_property location {7 2348 -1366} [get_bd_cells ddc_spec_0]
+connect_bd_net [get_bd_pins ddc_spec_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+delete_bd_objs [get_bd_cells ddc_spec_0]
+report_ip_status -name ip_status 
+startgroup
+create_bd_cell -type ip -vlnv User_Company:SysGen:ddc_spec:1.0 ddc_spec_0
+endgroup
+set_property location {7 2448 -1446} [get_bd_cells ddc_spec_0]
+report_ip_status -name ip_status 
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+report_ip_status -name ip_status 
+set_property -dict [list CONFIG.CONST_WIDTH {27} CONFIG.CONST_VAL {32212254}] [get_bd_cells xlconstant_0]
+set_property location {6.5 2085 -1453} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins ddc_spec_0/config_tdata_pinc]
+set_property location {6 2087 -1440} [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins ddc_spec_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property location {7 2068 -1524} [get_bd_cells xlconstant_1]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins ddc_spec_0/config_tvalid]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:dds_compiler:6.0 dds_compiler_0
+endgroup
+set_property location {6 2091 -1688} [get_bd_cells dds_compiler_0]
+set_property -dict [list CONFIG.DDS_Clock_Rate {125} CONFIG.Parameter_Entry {Hardware_Parameters} CONFIG.Phase_Width {32} CONFIG.Output_Width {14} CONFIG.Output_Selection {Sine} CONFIG.Has_Phase_Out {false} CONFIG.PINC1 {111111011111001110110110010001} CONFIG.Frequency_Resolution {0.4} CONFIG.Noise_Shaping {None} CONFIG.M_DATA_Has_TUSER {Not_Required} CONFIG.Latency {7} CONFIG.Output_Frequency1 {0}] [get_bd_cells dds_compiler_0]
+connect_bd_net [get_bd_pins dds_compiler_0/m_axis_data_tdata] [get_bd_pins ddc_spec_0/rf_tdata]
+connect_bd_net [get_bd_pins dds_compiler_0/aclk] [get_bd_pins jesd204_0/rx_core_clk_out]
+create_bd_port -dir O -from 61 -to 0 im_tdata
+connect_bd_net [get_bd_ports im_tdata] [get_bd_pins ddc_spec_0/im_tdata]
+startgroup
+copy_bd_objs /  [get_bd_ports {im_tdata}]
+set_property location {3139 -1446} [get_bd_ports im_tdata1]
+endgroup
+delete_bd_objs [get_bd_ports im_tdata1]
+create_bd_port -dir O -from 61 -to 0 re_tdata
+startgroup
+connect_bd_net [get_bd_ports re_tdata] [get_bd_pins ddc_spec_0/re_tdata]
+endgroup
+create_bd_port -dir O m_axis_data_tvalid
+connect_bd_net [get_bd_ports m_axis_data_tvalid] [get_bd_pins dds_compiler_0/m_axis_data_tvalid]
+create_bd_port -dir O data_tvalid
+connect_bd_net [get_bd_ports data_tvalid] [get_bd_pins ddc_spec_0/data_tvalid]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {ddc_spec_0_im_tdata ddc_spec_0_data_tvalid dds_compiler_0_m_axis_data_tvalid ddc_spec_0_re_tdata }]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets ddc_spec_0_im_tdata] {PROBE_TYPE "Data and Trigger" CLK_SRC "/jesd204_0/rx_core_clk_out" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ddc_spec_0_re_tdata] {PROBE_TYPE "Data and Trigger" CLK_SRC "/jesd204_0/rx_core_clk_out" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets dds_compiler_0_m_axis_data_tvalid] {PROBE_TYPE "Data and Trigger" CLK_SRC "/jesd204_0/rx_core_clk_out" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets ddc_spec_0_data_tvalid] {PROBE_TYPE "Data and Trigger" CLK_SRC "/jesd204_0/rx_core_clk_out" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+delete_bd_objs [get_bd_ports data_tvalid] [get_bd_ports m_axis_data_tvalid] [get_bd_ports im_tdata] [get_bd_ports re_tdata]
+validate_bd_design
+report_ip_status -name ip_status 
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {14.5} CONFIG.C_DATA_DEPTH {65536}] [get_bd_cells system_ila_2]
+endgroup
+validate_bd_design
+report_ip_status -name ip_status 
+save_bd_design
+reset_run synth_1
+reset_run axi_spi_top_system_ila_2_1_synth_1
+reset_run axi_spi_top_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_param general.maxThreads 8
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+set_property PARAM.FREQUENCY 12000000 [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+open_hw_target
+set_property PROGRAM.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]]
+add_wave -into {hw_ila_data_2.wcfg} -radix hex { {axi_spi_top_i/system_ila_1/inst/probe3_1} {axi_spi_top_i/system_ila_1/inst/probe9_1} {axi_spi_top_i/system_ila_1/inst/probe5_1} {axi_spi_top_i/system_ila_1/inst/probe7_1} {axi_spi_top_i/system_ila_1/inst/probe8_1} {axi_spi_top_i/system_ila_1/inst/probe4_1} {axi_spi_top_i/system_ila_1/inst/probe6_1} {axi_spi_top_i/system_ila_1/inst/probe0_1} {axi_spi_top_i/system_ila_1/inst/probe2_1} {axi_spi_top_i/system_ila_1/inst/probe1_1} }
+set_property NAME.CUSTOM jesd204_0_rx_aresetn [get_hw_probes axi_spi_top_i/system_ila_1/inst/probe3_1] 
+set_property NAME.CUSTOM jesd204_0_rx_core_clk_out [get_hw_probes axi_spi_top_i/system_ila_1/inst/probe9_1] 
+set_property NAME.CUSTOM jesd204_0_rx_end_of_frame [get_hw_probes axi_spi_top_i/system_ila_1/inst/probe5_1] 
+set_property NAME.CUSTOM jesd204_0_rx_end_of_multiframe [get_hw_probes axi_spi_top_i/system_ila_1/inst/probe7_1] 
+set_property NAME.CUSTOM jesd204_0_rx_frame_error [get_hw_probes axi_spi_top_i/system_ila_1/inst/probe8_1] 
+set_property NAME.CUSTOM jesd204_0_rx_start_of_frame [get_hw_probes axi_spi_top_i/system_ila_1/inst/probe4_1] 
+set_property NAME.CUSTOM jesd204_0_rx_start_of_multiframe [get_hw_probes axi_spi_top_i/system_ila_1/inst/probe6_1] 
+set_property NAME.CUSTOM jesd204_0_rx_sync [get_hw_probes axi_spi_top_i/system_ila_1/inst/probe0_1] 
+set_property NAME.CUSTOM jesd204_0_rx_tdata [get_hw_probes axi_spi_top_i/system_ila_1/inst/probe2_1] 
+set_property NAME.CUSTOM jesd204_0_rx_tvalid [get_hw_probes axi_spi_top_i/system_ila_1/inst/probe1_1] 
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+report_ip_status -name ip_status 
+add_wave -into {hw_ila_data_3.wcfg} -radix hex { {axi_spi_top_i/system_ila_2/inst/probe7_1} {axi_spi_top_i/system_ila_2/inst/probe4_1} {axi_spi_top_i/system_ila_2/inst/probe5_1} {axi_spi_top_i/system_ila_2/inst/probe6_1} }
+set_property NAME.CUSTOM ddc_spec_0_data_tvalid [get_hw_probes axi_spi_top_i/system_ila_2/inst/probe7_1] 
+set_property NAME.CUSTOM ddc_spec_0_im_tdata [get_hw_probes axi_spi_top_i/system_ila_2/inst/probe4_1] 
+set_property NAME.CUSTOM ddc_spec_0_re_tdata [get_hw_probes axi_spi_top_i/system_ila_2/inst/probe5_1] 
+set_property NAME.CUSTOM dds_compiler_0_m_axis_data_tvalid [get_hw_probes axi_spi_top_i/system_ila_2/inst/probe6_1] 
+open_run impl_1
+open_bd_design {D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/axi_spi_top.bd}
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+write_hw_ila_data -csv_file {D:\DC2226A_DATA\iladata_ddctest.csv} hw_ila_data_3
+open_run impl_1
+open_bd_design {D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/axi_spi_top.bd}
+startgroup
+report_route_status -of_objects [get_nets axi_spi_top_i/jesd204_0/rx_core_clk_out]
+endgroup
+open_bd_design {D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/axi_spi_top.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_register_slice:2.1 axi_register_slice_0
+endgroup
+delete_bd_objs [get_bd_cells axi_register_slice_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_0
+endgroup
+open_bd_design {D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/axi_spi_top.bd}
+startgroup
+copy_bd_objs /  [get_bd_cells {xlconstant_1}]
+set_property location {7 2691 -1762} [get_bd_cells xlconstant_2]
+endgroup
+set_property location {8 3020 -1701} [get_bd_cells axis_register_slice_0]
+connect_bd_net [get_bd_pins xlconstant_2/dout] [get_bd_pins axis_register_slice_0/s_axis_tvalid]
+connect_bd_net [get_bd_pins axis_register_slice_0/aclk] [get_bd_pins jesd204_0/rx_core_clk_out]
+connect_bd_net [get_bd_pins axis_register_slice_0/s_axis_tdata] [get_bd_pins ddc_spec_0/im_tdata]
+startgroup
+set_property -dict [list CONFIG.REG_CONFIG {8}] [get_bd_cells axis_register_slice_0]
+endgroup
+startgroup
+copy_bd_objs /  [get_bd_cells {axis_register_slice_0}]
+set_property location {8 3074 -1446} [get_bd_cells axis_register_slice_1]
+endgroup
+connect_bd_net [get_bd_pins axis_register_slice_1/s_axis_tvalid] [get_bd_pins xlconstant_2/dout]
+connect_bd_net [get_bd_pins axis_register_slice_1/s_axis_tdata] [get_bd_pins ddc_spec_0/re_tdata]
+connect_bd_net [get_bd_pins axis_register_slice_1/aclk] [get_bd_pins jesd204_0/rx_core_clk_out]
+connect_bd_net [get_bd_pins axis_register_slice_0/aresetn] [get_bd_pins rst_clk_wiz_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_register_slice_1/aresetn] [get_bd_pins rst_clk_wiz_0_100M/peripheral_aresetn]
+startgroup
+copy_bd_objs /  [get_bd_cells {axis_register_slice_0}]
+set_property location {8.5 3412 -1700} [get_bd_cells axis_register_slice_2]
+endgroup
+startgroup
+copy_bd_objs /  [get_bd_cells {axis_register_slice_1}]
+set_property location {9 3421 -1453} [get_bd_cells axis_register_slice_3]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axis_register_slice_1/M_AXIS] [get_bd_intf_pins axis_register_slice_3/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_register_slice_0/M_AXIS] [get_bd_intf_pins axis_register_slice_2/S_AXIS]
+connect_bd_net [get_bd_pins axis_register_slice_3/aresetn] [get_bd_pins rst_clk_wiz_0_100M/peripheral_aresetn]
+connect_bd_net [get_bd_pins axis_register_slice_2/aresetn] [get_bd_pins rst_clk_wiz_0_100M/peripheral_aresetn]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_1
+endgroup
+set_property -dict [list CONFIG.PRIM_IN_FREQ.VALUE_SRC USER] [get_bd_cells clk_wiz_1]
+set_property -dict [list CONFIG.PRIM_SOURCE {Global_buffer} CONFIG.PRIM_IN_FREQ {125} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {12.5} CONFIG.CLKIN1_JITTER_PS {80.0} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {30.250} CONFIG.MMCM_CLKIN1_PERIOD {8.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {60.500} CONFIG.CLKOUT1_JITTER {414.133} CONFIG.CLKOUT1_PHASE_ERROR {282.214}] [get_bd_cells clk_wiz_1]
+set_property location {7 2569 -1964} [get_bd_cells clk_wiz_1]
+connect_bd_net [get_bd_pins clk_wiz_1/clk_in1] [get_bd_pins jesd204_0/rx_core_clk_out]
+connect_bd_net [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins axis_register_slice_2/aclk]
+connect_bd_net [get_bd_pins axis_register_slice_3/aclk] [get_bd_pins clk_wiz_1/clk_out1]
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { ddc_spec_0_re_tdata } ]
+disconnect_bd_net [get_bd_net ddc_spec_0_re_tdata] [get_bd_pins system_ila_2/probe5]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_2]
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { ddc_spec_0_im_tdata } ]
+disconnect_bd_net [get_bd_net ddc_spec_0_im_tdata] [get_bd_pins system_ila_2/probe4]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_2]
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { ddc_spec_0_data_tvalid } ]
+disconnect_bd_net [get_bd_net ddc_spec_0_data_tvalid] [get_bd_pins system_ila_2/probe5]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_2]
+endgroup
+delete_bd_objs [get_bd_nets ddc_spec_0_data_tvalid]
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { dds_compiler_0_m_axis_data_tvalid } ]
+disconnect_bd_net [get_bd_net dds_compiler_0_m_axis_data_tvalid] [get_bd_pins system_ila_2/probe4]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_2]
+endgroup
+delete_bd_objs [get_bd_nets dds_compiler_0_m_axis_data_tvalid]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axis_register_slice_2/M_AXIS]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axis_register_slice_3/M_AXIS]
+endgroup
+connect_bd_net [get_bd_pins axis_register_slice_2/m_axis_tready] [get_bd_pins xlconstant_2/dout]
+connect_bd_net [get_bd_pins axis_register_slice_3/m_axis_tready] [get_bd_pins xlconstant_2/dout]
+delete_bd_objs [get_bd_intf_nets axis_register_slice_3_M_AXIS]
+delete_bd_objs [get_bd_intf_ports M_AXIS_1]
+delete_bd_objs [get_bd_intf_nets axis_register_slice_2_M_AXIS] [get_bd_intf_ports M_AXIS_0]
+startgroup
+make_bd_pins_external  [get_bd_pins axis_register_slice_2/m_axis_tvalid]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins axis_register_slice_2/m_axis_tdata]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins axis_register_slice_3/m_axis_tvalid]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins axis_register_slice_3/m_axis_tdata]
+endgroup
+validate_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:v_cresample:4.0 v_cresample_0
+endgroup
+delete_bd_objs [get_bd_cells v_cresample_0]
+close [ open D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/new/resample.v w ]
+add_files D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/new/resample.v
+update_compile_order -fileset sources_1
+delete_bd_objs [get_bd_intf_nets axis_register_slice_0_M_AXIS] [get_bd_nets ddc_spec_0_im_tdata] [get_bd_cells axis_register_slice_0]
+delete_bd_objs [get_bd_intf_nets axis_register_slice_1_M_AXIS] [get_bd_nets ddc_spec_0_re_tdata] [get_bd_cells axis_register_slice_1]
+delete_bd_objs [get_bd_nets axis_register_slice_3_m_axis_tdata] [get_bd_nets axis_register_slice_3_m_axis_tvalid] [get_bd_cells axis_register_slice_3]
+delete_bd_objs [get_bd_nets axis_register_slice_2_m_axis_tvalid] [get_bd_nets axis_register_slice_2_m_axis_tdata] [get_bd_nets clk_wiz_1_clk_out1] [get_bd_nets xlconstant_2_dout] [get_bd_cells axis_register_slice_2]
+delete_bd_objs [get_bd_cells xlconstant_2]
+create_bd_cell -type module -reference resample resample_0
+set_property location {8 2991 -1471} [get_bd_cells resample_0]
+set_property location {8 3009 -1400} [get_bd_cells resample_0]
+set_property location {8 3010 -1406} [get_bd_cells resample_0]
+set_property location {8 2998 -1417} [get_bd_cells resample_0]
+connect_bd_net [get_bd_pins resample_0/im_data] [get_bd_pins ddc_spec_0/im_tdata]
+connect_bd_net [get_bd_pins resample_0/re_data] [get_bd_pins ddc_spec_0/re_tdata]
+set_property location {8 2997 -1441} [get_bd_cells resample_0]
+set_property location {8 3014 -1408} [get_bd_cells resample_0]
+set_property location {8 3003 -1443} [get_bd_cells resample_0]
+connect_bd_net [get_bd_pins resample_0/in_valid] [get_bd_pins ddc_spec_0/data_tvalid]
+delete_bd_objs [get_bd_nets ddc_spec_0_data_tvalid]
+connect_bd_net [get_bd_pins resample_0/in_valid] [get_bd_pins xlconstant_1/dout]
+connect_bd_net [get_bd_pins resample_0/in_clk] [get_bd_pins jesd204_0/rx_core_clk_out]
+connect_bd_net [get_bd_pins resample_0/out_clk] [get_bd_pins clk_wiz_1/clk_out1]
+set_property location {7 2559 -1742} [get_bd_cells clk_wiz_1]
+set_property location {7 2563 -1727} [get_bd_cells clk_wiz_1]
+delete_bd_objs [get_bd_ports m_axis_tvalid_1] [get_bd_ports m_axis_tdata_1] [get_bd_ports m_axis_tvalid_0] [get_bd_ports m_axis_tdata_0]
+startgroup
+make_bd_pins_external  [get_bd_pins resample_0/o_im_data]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins resample_0/o_re_data]
+endgroup
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {resample_0_o_re_data resample_0_o_im_data }]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets resample_0_o_im_data] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk_wiz_1/clk_out1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets resample_0_o_re_data] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk_wiz_0/clk_out1" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+undo
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets resample_0_o_im_data] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk_wiz_1/clk_out1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets resample_0_o_re_data] {PROBE_TYPE "Data and Trigger" CLK_SRC "/clk_wiz_1/clk_out1" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_nets { jesd204_0_rx_core_clk_out } ]
+disconnect_bd_net [get_bd_net jesd204_0_rx_core_clk_out] [get_bd_pins system_ila_1/probe9]
+apply_bd_automation -rule xilinx.com:bd_rule:resize [get_bd_cells system_ila_1]
+endgroup
+delete_bd_objs [get_bd_nets clk_wiz_0_clk_out2]
+connect_bd_net [get_bd_pins system_ila_1/clk] [get_bd_pins jesd204_0/rx_core_clk_out]
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {0.5} CONFIG.C_DATA_DEPTH {4096}] [get_bd_cells system_ila_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {4} CONFIG.C_DATA_DEPTH {65536}] [get_bd_cells system_ila_3]
+endgroup
+delete_bd_objs [get_bd_ports o_im_data_0]
+delete_bd_objs [get_bd_ports o_re_data_0]
+validate_bd_design
+reset_run axi_spi_top_system_ila_1_1_synth_1
+reset_run axi_spi_top_system_ila_2_1_synth_1
+save_bd_design
+reset_run synth_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+delete_bd_objs [get_bd_nets dds_compiler_0_m_axis_data_tdata]
+connect_bd_net [get_bd_pins ddc_spec_0/rf_tdata] [get_bd_pins data_rearrange_0/adc0_sample0]
+validate_bd_design
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_clock_networks -name {network_1}
+report_clock_interaction -delay_type min_max -significant_digits 3 -name timing_2
+open_bd_design {D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/axi_spi_top.bd}
+set_multicycle_path -from [get_clocks GBT_REFCLK_p] -to [get_clocks -of_objects [get_pins axi_spi_top_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT0]] 10
+report_clock_interaction -delay_type min_max -significant_digits 3 -name timing_2
+report_clock_interaction -delay_type min_max -significant_digits 3 -name timing_2
+set_multicycle_path -hold -from [get_clocks GBT_REFCLK_p] -to [get_clocks -of_objects [get_pins axi_spi_top_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT0]] 9
+save_constraints
+report_clock_networks -name {network_1}
+close_design
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+report_clock_networks -name {network_1}
+report_clock_interaction -delay_type min_max -significant_digits 3 -name timing_1
+close_design
+open_run impl_1
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+disconnect_hw_server localhost:3121
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+set_property PARAM.FREQUENCY 12000000 [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+open_hw_target
+set_property PROGRAM.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_4 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+add_wave -into {hw_ila_data_4.wcfg} -radix hex { {axi_spi_top_i/system_ila_3/inst/probe1_1} }
+set_property NAME.CUSTOM resample_0_o_re_data [get_hw_probes axi_spi_top_i/system_ila_3/inst/probe1_1] 
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_4/hw_ila_data_4.wcfg}
+close_hw_target {localhost:3121/xilinx_tcf/Xilinx/00000000000000}
+set_property PARAM.FREQUENCY 3000000 [get_hw_targets localhost:3121/xilinx_tcf/Xilinx/00000000000000]
+open_hw_target {localhost:3121/xilinx_tcf/Xilinx/00000000000000}
+set_property PROGRAM.FILE {C:/Xilinx/Vivado/2018.1/data/xicom/cfgmem/bitfile/spi_xc7k325t_pullnone.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_4 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+write_hw_ila_data -csv_file {D:\DC2226A_DATA\iladata_ddc_float.csv} hw_ila_data_4
+close_hw
+close_design
+close [ open D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/new/reformat.v w ]
+add_files D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/new/reformat.v
+update_compile_order -fileset sources_1
+open_bd_design {D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/axi_spi_top.bd}
+create_bd_cell -type module -reference reformat reformat_0
+set_property location {9 3019 -833} [get_bd_cells reformat_0]
+set_property location {9 3061 -1284} [get_bd_cells reformat_0]
+delete_bd_objs [get_bd_nets data_rearrange_0_adc0_sample0]
+connect_bd_net [get_bd_pins system_ila_2/probe0] [get_bd_pins data_rearrange_0/adc0_sample0]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {data_rearrange_0_adc0_sample0 }]
+connect_bd_net [get_bd_pins reformat_0/clk] [get_bd_pins jesd204_0/rx_core_clk_out]
+connect_bd_net [get_bd_pins reformat_0/offsetbin] [get_bd_pins ddc_spec_0/rf_tdata]
+delete_bd_objs [get_bd_nets Net4]
+connect_bd_net [get_bd_pins reformat_0/offsetbin] [get_bd_pins data_rearrange_0/adc0_sample0]
+connect_bd_net [get_bd_pins reformat_0/twoscomp] [get_bd_pins ddc_spec_0/rf_tdata]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {reformat_0_twoscomp }]
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets reformat_0_twoscomp] {PROBE_TYPE "Data and Trigger" CLK_SRC "/jesd204_0/rx_core_clk_out" SYSTEM_ILA "Auto" } \
+                                                         ]
+undo
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets reformat_0_twoscomp] {PROBE_TYPE "Data and Trigger" CLK_SRC "/jesd204_0/rx_core_clk_out" SYSTEM_ILA "New" } \
+                                                         ]
+set_property location {10 3264 -1168} [get_bd_cells system_ila_4]
+set_property location {10 3261 -1399} [get_bd_cells system_ila_4]
+set_property location {9 3021 -1239} [get_bd_cells reformat_0]
+validate_bd_design
+save_bd_design
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+close_design
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+set_property PARAM.FREQUENCY 6000000 [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+open_hw_target
+set_property PROGRAM.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_4 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_5 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+write_hw_ila_data -csv_file {D:\DC2226A_DATA\iladata_31M_3dBm_LO30M.csv} hw_ila_data_4
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+write_hw_ila_data -csv_file {D:\DC2226A_DATA\iladata_30M_LO30M_6dBm.csv} hw_ila_data_4
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+write_hw_ila_data -csv_file {D:\DC2226A_DATA\iladata_ddc_901stop.csv} hw_ila_data_4
+open_bd_design {D:/Vivado2018_wrk/axi_spi/axi_spi.srcs/sources_1/bd/axi_spi_top/axi_spi_top.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:i2s_transmitter:1.0 i2s_transmitter_0
+endgroup
+close_bd_design [get_bd_designs axi_spi_top]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]]
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_4/hw_ila_data_4.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_5/hw_ila_data_5.wcfg}
+close_hw
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+set_property PARAM.FREQUENCY 6000000 [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+open_hw_target
+set_property PROGRAM.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_4 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_5 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]]
+write_cfgmem  -format mcs -size 16 -interface SPIx4 -loadbit {up 0x00000000 "D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit" } -file "D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/DDC_20190217"
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_4/hw_ila_data_4.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_5/hw_ila_data_5.wcfg}
+close_hw_target {localhost:3121/xilinx_tcf/Xilinx/00000000000000}
+set_property PARAM.FREQUENCY 12000000 [get_hw_targets localhost:3121/xilinx_tcf/Xilinx/00000000000000]
+open_hw_target {localhost:3121/xilinx_tcf/Xilinx/00000000000000}
+set_property PROGRAM.FILE {C:/Xilinx/Vivado/2018.1/data/xicom/cfgmem/bitfile/spi_xc7k325t_pullnone.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_4 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_5 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.FILES [list "D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/DDC_20190217.mcs" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+startgroup 
+if {![string equal [get_property PROGRAM.HW_CFGMEM_TYPE  [lindex [get_hw_devices xc7k325t_0] 0]] [get_property MEM_TYPE [get_property CFGMEM_PART [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]]]] }  { create_hw_bitstream -hw_device [lindex [get_hw_devices xc7k325t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7k325t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7k325t_0] 0]; }; 
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+endgroup
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_4/hw_ila_data_4.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_5/hw_ila_data_5.wcfg}
+close_hw_target {localhost:3121/xilinx_tcf/Xilinx/00000000000000}
+set_property PARAM.FREQUENCY 6000000 [get_hw_targets localhost:3121/xilinx_tcf/Xilinx/00000000000000]
+open_hw_target {localhost:3121/xilinx_tcf/Xilinx/00000000000000}
+set_property PROGRAM.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_4 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_5 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_4/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_3/inst/ila_lib"}]]
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_4/hw_ila_data_4.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_5/hw_ila_data_5.wcfg}

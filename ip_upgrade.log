@@ -1,0 +1,100 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Fri Feb  8 19:26:42 2019
+| Host         : zhatianyics-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'axi_spi_top_rst_clk_wiz_0_100M_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of axi_spi_top_rst_clk_wiz_0_100M_0 (xilinx.com:ip:proc_sys_reset:5.0 (Rev. 12)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Fri Feb  8 19:26:42 2019
+| Host         : zhatianyics-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'axi_spi_top_jtag_axi_0_axi_periph_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of axi_spi_top_jtag_axi_0_axi_periph_0 (xilinx.com:ip:axi_interconnect:2.1 (Rev. 17)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Fri Feb  8 19:26:42 2019
+| Host         : zhatianyics-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'axi_spi_top_jtag_axi_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of axi_spi_top_jtag_axi_0_0 (xilinx.com:ip:jtag_axi:1.2 (Rev. 6)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Fri Feb  8 19:26:42 2019
+| Host         : zhatianyics-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'axi_spi_top_clk_wiz_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of axi_spi_top_clk_wiz_0_0 (xilinx.com:ip:clk_wiz:6.0) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Fri Feb  8 19:26:42 2019
+| Host         : zhatianyics-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7k325tffg900-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'axi_spi_top_axi_quad_spi_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of axi_spi_top_axi_quad_spi_0_0 (xilinx.com:ip:axi_quad_spi:3.2 (Rev. 15)) to Vivado generation flows.
+

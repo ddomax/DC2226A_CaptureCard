@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sat Feb 16 21:10:48 2019
+# Process ID: 19716
+# Current directory: D:/Vivado2018_wrk/axi_spi
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24876 D:\Vivado2018_wrk\axi_spi\axi_spi.xpr
+# Log file: D:/Vivado2018_wrk/axi_spi/vivado.log
+# Journal file: D:/Vivado2018_wrk/axi_spi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Vivado2018_wrk/axi_spi/axi_spi.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+set_property PARAM.FREQUENCY 12000000 [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+open_hw_target
+set_property PROGRAM.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.FILES [list "D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/20190215-1432.mcs" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+startgroup 
+if {![string equal [get_property PROGRAM.HW_CFGMEM_TYPE  [lindex [get_hw_devices xc7k325t_0] 0]] [get_property MEM_TYPE [get_property CFGMEM_PART [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]]]] }  { create_hw_bitstream -hw_device [lindex [get_hw_devices xc7k325t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7k325t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7k325t_0] 0]; }; 
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+endgroup
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}

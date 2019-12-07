@@ -1,0 +1,141 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Sat Feb 16 21:10:48 2019
+# Process ID: 19716
+# Current directory: D:/Vivado2018_wrk/axi_spi
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24876 D:\Vivado2018_wrk\axi_spi\axi_spi.xpr
+# Log file: D:/Vivado2018_wrk/axi_spi/vivado.log
+# Journal file: D:/Vivado2018_wrk/axi_spi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Vivado2018_wrk/axi_spi/axi_spi.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:31 ; elapsed = 00:00:22 . Memory (MB): peak = 1034.160 ; gain = 264.766
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.1
+  **** Build date : Apr  4 2018-19:32:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+current_hw_target [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+set_property PARAM.FREQUENCY 12000000 [get_hw_targets */xilinx_tcf/Xilinx/00000000000000]
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/00000000000000
+set_property PROGRAM.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.bit} [get_hw_devices xc7k325t_0]
+set_property PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx} [get_hw_devices xc7k325t_0]
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'axi_spi_top_i/system_ila_2/inst/ila_lib' at location 'uuid_023E7F9B96FE57FEB2FE74F0EB2F7AD4' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'axi_spi_top_i/system_ila_0/inst/ila_lib' at location 'uuid_A0D62C6503B95D77950DD81E009C88AC' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'axi_spi_top_i/system_ila_1/inst/ila_lib' at location 'uuid_B22355033B7857018470EA38FA99D5E7' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7k325t_0 and the probes file(s) D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/axi_spi_top_wrapper.ltx.
+The device design has 2 ILA core(s) and 0 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+create_hw_cfgmem -hw_device [lindex [get_hw_devices] 0] -mem_dev [lindex [get_cfgmem_parts {mt25ql128-spi-x1_x2_x4}] 0]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.FILES [list "D:/Vivado2018_wrk/axi_spi/axi_spi.runs/impl_1/20190215-1432.mcs" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+startgroup 
+if {![string equal [get_property PROGRAM.HW_CFGMEM_TYPE  [lindex [get_hw_devices xc7k325t_0] 0]] [get_property MEM_TYPE [get_property CFGMEM_PART [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]]]] }  { create_hw_bitstream -hw_device [lindex [get_hw_devices xc7k325t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7k325t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7k325t_0] 0]; }; 
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7k325t_0] 0]]
+Mfg ID : 20   Memory Type : ba   Memory Capacity : 18   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:09 ; elapsed = 00:06:47 . Memory (MB): peak = 1777.852 ; gain = 27.883
+endgroup
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'axi_spi_top_i/system_ila_2/inst/ila_lib' at location 'uuid_023E7F9B96FE57FEB2FE74F0EB2F7AD4' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'axi_spi_top_i/system_ila_0/inst/ila_lib' at location 'uuid_A0D62C6503B95D77950DD81E009C88AC' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'axi_spi_top_i/system_ila_1/inst/ila_lib' at location 'uuid_B22355033B7857018470EA38FA99D5E7' from probes file, since it cannot be found on the programmed device.
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 3 ILA core(s).
+INFO: [Labtools 27-2302] Device xc7k325t (JTAG device index = 0) is programmed with a design that has 1 JTAG AXI core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_2 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_0/inst/ila_lib"}]]
+WARNING: Simulation object axi_spi_top_i/system_ila_1/inst/probe0_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_1/inst/probe3_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_1/inst/probe9_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_1/inst/probe1_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_1/inst/probe5_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_1/inst/probe7_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_1/inst/probe8_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_1/inst/probe4_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_1/inst/probe6_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_1/inst/probe2_1 was not found in the design.
+Processing Interface jtag_axi_0_axi_periph_M00_AXI_ila2_slot0
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/Vivado2018_wrk/axi_spi/axi_spi.hw/backup/hw_ila_data_2.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_1/inst/ila_lib"}]]
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/probe9_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/probe1_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/probe4_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/probe10_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/probe7_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/probe2_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/probe6_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/probe12_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/probe11_1 was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_arvalid was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_arready was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_araddr was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_arprot was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_ar_cnt was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_rvalid was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_rready was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_rdata was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_rresp was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_r_cnt was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_awvalid was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_awready was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_awaddr was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_awprot was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_aw_cnt was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_wvalid was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_wready was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_wdata was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_wstrb was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_bvalid was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_bready was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_bresp was not found in the design.
+WARNING: Simulation object axi_spi_top_i/system_ila_0/inst/net_slot_0_axi_b_cnt was not found in the design.
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/Vivado2018_wrk/axi_spi/axi_spi.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_3 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/Vivado2018_wrk/axi_spi/axi_spi.hw/backup/hw_ila_data_3.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_3' trigger was armed at 2019-Feb-16 21:20:07
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7k325t_0] -filter {CELL_NAME=~"axi_spi_top_i/system_ila_2/inst/ila_lib"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_3' triggered at 2019-Feb-16 21:20:07
+upload_hw_ila_data: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1799.484 ; gain = 4.902
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/Vivado2018_wrk/axi_spi/axi_spi.hw/backup/hw_ila_data_3.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+display_hw_ila_data: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1828.398 ; gain = 28.914
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wcfg}
+save_wave_config {D:/Vivado2018_wrk/axi_spi/axi_spi.hw/hw_1/wave/hw_ila_data_3/hw_ila_data_3.wcfg}
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 16 21:20:32 2019...
